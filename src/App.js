@@ -3,6 +3,7 @@ import { TaskList, TaskForm } from "./Components/index";
 import { Container } from "@material-ui/core";
 import httpMethod from "./common/helpers/httpInstance";
 import Edit from "@material-ui/icons/Edit";
+import PriorityHighRounded from "@material-ui/icons/PriorityHighRounded";
 
 import {
     CREATE_TASK,
@@ -48,7 +49,6 @@ function App() {
         var bodyFormData = new FormData();
         const appData = appendData(bodyFormData, data);
 
-        setLoading(true);
         httpMethod
             .post(CREATE_TASK, bodyFormData)
             .then((res) => {
@@ -85,8 +85,6 @@ function App() {
         const appData = appendData(bodyFormData, { taskid: data });
         setLoading(true);
         httpMethod.post(DELETE_TASK, bodyFormData).then((res) => {
-            console.log(res);
-            setLoading(false);
             setTaskList(null);
             getTaskList();
             setLoading(false);
@@ -101,6 +99,9 @@ function App() {
                     button to save.
                 </li>
                 <li>*form is resusable </li>
+                <li>
+                    Click on <PriorityHighRounded /> to set priority
+                </li>
             </ul>
             <TaskForm
                 editUser={editUser}

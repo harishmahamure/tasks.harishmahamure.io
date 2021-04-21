@@ -191,17 +191,16 @@ export default function TaskForm({
                             {renderPriorities()}
                         </Menu>
                     </IconButton>
-                    <IconButton aria-label="add">
+                    <IconButton
+                        aria-label="add"
+                        onClick={() =>
+                            editItem ? editUser(form) : handleCreateTask(form)
+                        }
+                    >
                         {!editItem ? (
-                            <AddOutlined
-                                color="primary"
-                                onClick={() => handleCreateTask(form)}
-                            />
+                            <AddOutlined color="primary" />
                         ) : (
-                            <Edit
-                                color="secondary"
-                                onClick={() => editUser(form)}
-                            />
+                            <Edit color="secondary" />
                         )}
                     </IconButton>
                 </Grid>
