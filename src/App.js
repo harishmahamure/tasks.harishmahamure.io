@@ -92,6 +92,14 @@ function App() {
     };
     return (
         <Container maxWidth="sm">
+            <ul>
+                <li>
+                    *To edit click on listitem edit button. Form will update
+                    fields. You can change all the field and press on edit
+                    button to save.
+                </li>
+                <li>*form resusable </li>
+            </ul>
             <TaskForm
                 editUser={editUser}
                 editItem={editItem}
