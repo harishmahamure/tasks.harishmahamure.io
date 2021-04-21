@@ -9,7 +9,7 @@ const httpInstance = axios.create({
 httpInstance.interceptors.request.use(
 	(apiConfig) => {
 		apiConfig.headers["AuthToken"] = "0ruAaKiEo46PUYqMxFHH895DWivpeVrZ";
-		return apiConfig;
+		return { ...apiConfig };
 	},
 	(err) => {
 		return Promise.reject(err);
