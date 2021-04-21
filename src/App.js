@@ -51,6 +51,7 @@ function App() {
             .post(CREATE_TASK, bodyFormData)
             .then((res) => {
                 setTaskList(null);
+
                 getTaskList();
                 setLoading(false);
             })
@@ -80,12 +81,13 @@ function App() {
     const deleteUser = (data) => {
         var bodyFormData = new FormData();
         const appData = appendData(bodyFormData, { taskid: data });
-
+        setLoading(true);
         httpMethod.post(DELETE_TASK, bodyFormData).then((res) => {
             console.log(res);
             setLoading(false);
             setTaskList(null);
             getTaskList();
+            setLoading(false);
         });
     };
     return (
@@ -104,7 +106,9 @@ function App() {
                     setEditItem={setEditItem}
                     deleteUser={deleteUser}
                 />
-            ) : null}
+            ) : (
+                <div>Loading...</div>
+            )}
         </Container>
     );
 }
