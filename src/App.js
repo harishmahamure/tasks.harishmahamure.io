@@ -50,6 +50,7 @@ function App() {
         httpMethod
             .post(CREATE_TASK, bodyFormData)
             .then((res) => {
+                setTaskList(null);
                 getTaskList();
                 setLoading(false);
             })
@@ -66,7 +67,7 @@ function App() {
         httpMethod
             .post(UPDATE_TASKS, bodyFormData)
             .then((res) => {
-                console.log(res);
+                setTaskList(null);
                 getTaskList();
                 setLoading(false);
                 setEditItem(null);
@@ -74,6 +75,18 @@ function App() {
             .catch((err) => {
                 setLoading(false);
             });
+    };
+
+    const deleteUser = (data) => {
+        var bodyFormData = new FormData();
+        const appData = appendData(bodyFormData, { taskid: data });
+
+        httpMethod.post(DELETE_TASK, bodyFormData).then((res) => {
+            console.log(res);
+            setLoading(false);
+            setTaskList(null);
+            getTaskList();
+        });
     };
     return (
         <Container maxWidth="sm">
@@ -89,6 +102,7 @@ function App() {
                     users={userList}
                     tasks={taskList}
                     setEditItem={setEditItem}
+                    deleteUser={deleteUser}
                 />
             ) : null}
         </Container>

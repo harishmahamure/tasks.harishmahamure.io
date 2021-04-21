@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function TaskList({ tasks, users, setEditItem, editUser }) {
+export default function TaskList({ tasks, users, setEditItem, deleteUser }) {
     const classes = useStyles();
 
     const selectPriorityColor = (priority) => {
@@ -79,7 +79,9 @@ export default function TaskList({ tasks, users, setEditItem, editUser }) {
                                 />
                             </IconButton>
                             <IconButton edge="end" aria-label="delete">
-                                <DeleteIcon />
+                                <DeleteIcon
+                                    onClick={() => deleteUser(task.id)}
+                                />
                             </IconButton>
                         </ListItemSecondaryAction>
                     </Grid>
