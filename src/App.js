@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { TaskList, TaskForm } from "./Components/index";
 import { Container } from "@material-ui/core";
 import httpMethod from "./common/helpers/httpInstance";
+import Edit from "@material-ui/icons/Edit";
+
 import {
     CREATE_TASK,
     DELETE_TASK,
@@ -94,11 +96,11 @@ function App() {
         <Container maxWidth="sm">
             <ul>
                 <li>
-                    *To edit click on listitem edit button. Form will update
+                    *To edit click on <Edit /> in List Item. Form will update
                     fields. You can change all the field and press on edit
                     button to save.
                 </li>
-                <li>*form resusable </li>
+                <li>*form is resusable </li>
             </ul>
             <TaskForm
                 editUser={editUser}
