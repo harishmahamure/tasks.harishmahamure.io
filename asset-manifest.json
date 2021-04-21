@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/tasks.harishmahamure.io/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/tasks.harishmahamure.io/static/js/main.206268cd.chunk.js",
-    "main.js.map": "/tasks.harishmahamure.io/static/js/main.206268cd.chunk.js.map",
+    "main.js": "/tasks.harishmahamure.io/static/js/main.dca84ad9.chunk.js",
+    "main.js.map": "/tasks.harishmahamure.io/static/js/main.dca84ad9.chunk.js.map",
     "runtime-main.js": "/tasks.harishmahamure.io/static/js/runtime-main.1d9d65f1.js",
     "runtime-main.js.map": "/tasks.harishmahamure.io/static/js/runtime-main.1d9d65f1.js.map",
-    "static/js/2.c838b786.chunk.js": "/tasks.harishmahamure.io/static/js/2.c838b786.chunk.js",
-    "static/js/2.c838b786.chunk.js.map": "/tasks.harishmahamure.io/static/js/2.c838b786.chunk.js.map",
+    "static/js/2.8fecdfe9.chunk.js": "/tasks.harishmahamure.io/static/js/2.8fecdfe9.chunk.js",
+    "static/js/2.8fecdfe9.chunk.js.map": "/tasks.harishmahamure.io/static/js/2.8fecdfe9.chunk.js.map",
     "static/js/3.70a50c7b.chunk.js": "/tasks.harishmahamure.io/static/js/3.70a50c7b.chunk.js",
     "static/js/3.70a50c7b.chunk.js.map": "/tasks.harishmahamure.io/static/js/3.70a50c7b.chunk.js.map",
     "index.html": "/tasks.harishmahamure.io/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/tasks.harishmahamure.io/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.c838b786.chunk.js.LICENSE.txt": "/tasks.harishmahamure.io/static/js/2.c838b786.chunk.js.LICENSE.txt"
+    "static/js/2.8fecdfe9.chunk.js.LICENSE.txt": "/tasks.harishmahamure.io/static/js/2.8fecdfe9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1d9d65f1.js",
-    "static/js/2.c838b786.chunk.js",
+    "static/js/2.8fecdfe9.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.206268cd.chunk.js"
+    "static/js/main.dca84ad9.chunk.js"
   ]
 }
