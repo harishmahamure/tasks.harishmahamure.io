@@ -119,9 +119,9 @@ export default function TaskForm({
     const selectPriorityColor = () => {
         switch (parseInt(priority)) {
             case 1:
-                return "action";
+                return "primary";
             case 0:
-                return "primary ";
+                return "action";
 
             case 2:
                 return "secondary";
@@ -193,9 +193,16 @@ export default function TaskForm({
                     </IconButton>
                     <IconButton
                         aria-label="add"
-                        onClick={() =>
-                            editItem ? editUser(form) : handleCreateTask(form)
-                        }
+                        onClick={() => {
+                            setFormData({
+                                message: "",
+                                due_date: "",
+                                priority: 0,
+                                assigned_to: null,
+                            });
+
+                            editItem ? editUser(form) : handleCreateTask(form);
+                        }}
                     >
                         {!editItem ? (
                             <AddOutlined color="primary" />
